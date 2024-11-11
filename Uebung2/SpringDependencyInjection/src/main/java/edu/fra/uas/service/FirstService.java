@@ -15,10 +15,10 @@ public class FirstService {
 	}
 	
 	// Constructor Injection
-//	@Autowired
-//	public FirstService(SecondService secondService) {
-//		this.secondService = secondService;
-//	}
+	@Autowired
+	public FirstService(SecondService secondService) {
+	this.secondService = secondService;
+	}
 	
 	// Setter Injection
 //	@Autowired

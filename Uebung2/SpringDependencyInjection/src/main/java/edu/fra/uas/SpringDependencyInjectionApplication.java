@@ -6,13 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import edu.fra.uas.service.FirstService;
+//import edu.fra.uas.service.FirstService;
 
 @SpringBootApplication
 public class SpringDependencyInjectionApplication {
 	
 	@Autowired
-	private FirstService firstService;
+	//private FirstService firstService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDependencyInjectionApplication.class, args);
@@ -25,7 +25,7 @@ public class SpringDependencyInjectionApplication {
 			@Override
 			public void run(String... args) throws Exception {
 //				FirstService firstService = new FirstService();
-				firstService.doSomething();
+				//firstService.doSomething();
 			}
 		};
 		return action;
