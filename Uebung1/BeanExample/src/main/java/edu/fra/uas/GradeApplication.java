@@ -21,8 +21,13 @@ public class GradeApplication implements CommandLineRunner {
     public void run(String... args) {
         // Beispielhafte Noten hinzufügen
         gradeService.addGrade(1.7);
-        gradeService.addGrade(2.3);
+        gradeService.addGrade(2.0);
+        gradeService.addGrade(3.0);
+        gradeService.addGrade(2.0);
         gradeService.addGrade(1.0);
+        gradeService.addGrade(1.3);
+        gradeService.addGrade(1.7);
+        gradeService.addGrade(1.3);
 
         // Notendurchschnitt berechnen
         double average = gradeService.calculateAverage();
