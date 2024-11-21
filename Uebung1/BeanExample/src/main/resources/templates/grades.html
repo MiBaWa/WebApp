@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Notenübersicht</title>
+</head>
+<body>
+    <h1>Notenübersicht</h1>
+    <table border="1">
+        <tr>
+            <th>Note</th>
+        </tr>
+        <tr th:each="grade : ${grades}">
+            <td th:text="${grade}"></td>
+        </tr>
+    </table>
+    <h2>Notendurchschnitt: <span th:text="${average}"></span></h2>
+    <h2>Neue Note hinzufügen</h2>
+    <form action="/addGrade" method="post">
+        <label for="grade">Note:</label>
+        <input type="text" id="grade" name="grade">
+        <button type="submit">Hinzufügen</button>
+    </form>
+    <h2>Notenliste leeren</h2>
+    <form action="/clearGrades" method="post">
+        <button type="submit">Leeren</button>
+    </form>
+</body>
+</html>
