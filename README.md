@@ -173,16 +173,11 @@ Der Aufbau des Systems umfasst zwei Hauptbereiche:
 - **3. Benachrichtigungs- und Filtermechanismen:** Das System muss Benachrichtigungen über Änderungen an To-Dos sowie effektive Filtermöglichkeiten bieten, um den Benutzern einen schnellen Zugriff auf relevante Informationen zu ermöglichen.
 
 ### User Stories 
-   | **Als**        | **möchte ich**                                     | **weil/damit**                    |
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | alle To-Dos, Status und User in einer einzigen Schnittstelle sehen können | ich ein konsistentes und übersichtliches Erlebnis habe.|
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | To-Dos, User und Status zentral ansprechen können |ich alles an einem Ort machen kann.    |
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | Usern To-Dos zuweisen können                    |die Verantwortung für Aufgaben klar festzulegen|
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | To-Dos einen Status zuweisen können             | ihre Bearbeitungsphase zu gekennzeichnet ist |
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | Filteroptionen nutzen können                    | ich schneller auf relevante Informationen zugreifen zu können    |  
-   |-------------|-------------------------------------------------|-----------------------------------------|
-   | Benutzer    | die Möglichkeit haben, benachrichtigt zu werden, wenn ein User oder Status einer To-Do sich ändert | ich Änderungen zu bemerken und zu überwachen    |  
+   | **Als**     | **möchte ich**                                           | **weil/damit**                                   |
+|-------------|----------------------------------------------------------|-------------------------------------------------|
+| Benutzer    | alle To-Dos, Status und User in einer einzigen Schnittstelle sehen können | ich ein konsistentes und übersichtliches Erlebnis habe. |
+| Benutzer    | To-Dos, User und Status zentral ansprechen können         | ich alles an einem Ort machen kann.             |
+| Benutzer    | Usern To-Dos zuweisen können                              | die Verantwortung für Aufgaben klar festzulegen. |
+| Benutzer    | To-Dos einen Status zuweisen können                       | ihre Bearbeitungsphase gekennzeichnet ist.       |
+| Benutzer    | Filteroptionen nutzen können                              | ich schneller auf relevante Informationen zugreifen kann. |
+| Benutzer    | die Möglichkeit haben, benachrichtigt zu werden, wenn ein User oder Status einer To-Do sich ändert | ich Änderungen bemerke und überwachen kann.      |
