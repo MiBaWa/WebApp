@@ -85,7 +85,7 @@ Der Aufbau des Systems umfasst zwei Hauptbereiche:
    - [Kriterium 2]
 
 2. **User Story 2**:  
-   Als [Rolle] möchte ich [Funktion], um [Ziel].  
+   Als Benutzer möchte ich alle To-Dos, Status und User in einer einzigen Schnittstelle sehen können, um ein konsistentes und übersichtliches Erlebnis habe.  
    **Akzeptanzkriterien**:
    - [Kriterium 1]
    - [Kriterium 2]
