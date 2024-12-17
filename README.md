@@ -36,3 +36,131 @@
     - Angular (Angular - Einführung in Angular)
 9. Übung:
     - PWA (Angular - Single Page Application (SPA) und Progressive Web App)
+
+# Projektdokumentation
+
+## Gliederung der Dokumentation
+1. [Einführung](#einführung)
+2. [Anforderungen und User Stories](#anforderungen-und-user-stories)
+3. [Architektur des Systems](#architektur-des-systems)
+4. [API Gateway](#api-gateway)
+5. [Web Services](#web-services)
+6. [Fehlerbehandlung](#fehlerbehandlung)
+7. [Weitere Informationen](#weitere-informationen)
+
+---
+
+## Einführung
+Das System besteht aus drei unabhängig voneinander implementierten Services.
+
+- To-do-Service: Hier können To-dos erstellt, bearbeitet und gelöscht werden. Jeder To-do-Eintrag wird mit einer eindeutigen ID versehen.
+- Status-Service: In diesem Service können Status erstellt, bearbeitet und gelöscht werden. Diese werden in einer Liste gespeichert
+- User-Service: Dieser Service ermöglicht das Erstellen, Bearbeiten und Löschen von Nutzerprofilen. 
+Alle Services sind so unabhängig voneinander einsetzbar
+
+Das System bietet durch die Kombination seiner Services folgende Möglichkeiten:
+- Jedem Nutzer können To-dos zugewiesen werden, die jeweils einen Status erhalten können. Eine übersichtliche Darstellung dieser Informationen ist über ein Dashboard abrufbar. 
+- Die Ausführung aller Aufgaben erfolgt zentral über ein API-Gateway und entsprechende IDs.
+
+Der Aufbau des Systems umfasst zwei Hauptbereiche:
+- Übersichtsbereich: Hier wählt der Nutzer die gewünschten Inhalte zum anzeigen aus
+- Servicebereich:  In diesem Bereich können To-dos erstellt, Status zugewiesen und neue Nutzer angelegt werden.
+
+
+
+---
+
+## Anforderungen und User Stories
+
+### Anforderungen
+- [Anforderung 1: Beschreibung der ersten Anforderung]
+- [Anforderung 2: Beschreibung der zweiten Anforderung]
+- [Anforderung 3: Beschreibung der dritten Anforderung]
+
+### User Stories
+1. **User Story 1**:  
+   Als [Benutzer] möchte ich [alle To-Dos, Status und User in einer einzigen Schnittstelle sehen können], um [ein konsistentes und übersichtliches Erlebnis habe].  
+   **Akzeptanzkriterien**:
+   - [Kriterium 1]
+   - [Kriterium 2]
+
+2. **User Story 2**:  
+   Als [Rolle] möchte ich [Funktion], um [Ziel].  
+   **Akzeptanzkriterien**:
+   - [Kriterium 1]
+   - [Kriterium 2]
+
+---
+
+## Architektur des Systems
+[Hier kommt die Beschreibung der Systemarchitektur.]
+
+### Grafische Darstellung der Architektur
+![Diagramm](Dateipfad)
+
+### Erläuterung der Architektur
+- **API Gateway**:  
+  [Kurze Beschreibung des API Gateways.]
+
+- **Web Service 1**:  
+  [Beschreibung von Web Service 1.]
+
+- **Web Service 2**:  
+  [Beschreibung von Web Service 2.]
+
+- **Kommunikation zwischen den Komponenten**:  
+  [Beschreibung der Kommunikation zwischen den Systemteilen.]
+
+---
+
+## API Gateway
+[Die Inhalte aus der Datei `api-gateway-template.md` hier zusammenführen.]
+
+- **Funktionalität**:  
+  [Platzhalter für die Funktionalität des API Gateways.]
+
+- **Endpoints**:  
+  | No. | HTTP-Methode | URI                            | HTTP-Statuscode(s)                  | Consumes   | Produces |
+  |-----|--------------|--------------------------------|-------------------------------------|------------|----------|
+  | 1   | [GET/POST]   | [URI]                          | [Statuscodes]                       | [Format]   | [Format] |
+  | 2   | [GET/POST]   | [URI]                          | [Statuscodes]                       | [Format]   | [Format] |
+
+- **Konvertierungsvorschriften**:  
+  [Beschreibung der Konvertierungsprozesse.]
+
+---
+
+## Web Services
+[Die Inhalte aus der Datei `web-service-template.md` hier einfügen.]
+
+### Web Service 1
+- **Zweck**: [Beschreibung der Funktion des Services.]  
+- **Endpoints**:  
+  | No. | HTTP-Methode | URI              | HTTP-Statuscode(s)       | Consumes   | Produces |
+  |-----|--------------|------------------|--------------------------|------------|----------|
+  | 1   | [GET/POST]   | [URI]            | [Statuscodes]            | [Format]   | [Format] |
+
+### Web Service 2
+- **Zweck**: [Beschreibung der Funktion des Services.]  
+- **Endpoints**:  
+  | No. | HTTP-Methode | URI              | HTTP-Statuscode(s)       | Consumes   | Produces |
+  |-----|--------------|------------------|--------------------------|------------|----------|
+  | 1   | [GET/POST]   | [URI]            | [Statuscodes]            | [Format]   | [Format] |
+
+---
+
+## Fehlerbehandlung
+[Hier die Fehlerbehandlung für API Gateway und Web Services zusammenführen.]
+
+- **Fehler 400**: [Beschreibung des Fehlers, z.B. Ungültige Anfrage.]
+- **Fehler 401**: [Beschreibung des Fehlers, z.B. Fehlende Authentifizierung.]
+- **Fehler 500**: [Beschreibung des Fehlers, z.B. Interner Serverfehler.]
+
+---
+
+## Weitere Informationen
+[Zusätzliche Informationen wie verwendete Technologien, Sicherheitsmaßnahmen oder Quellen.]
+
+### Quellen
+- [Quelle 1: Name oder Link der Quelle]
+- [Quelle 2: Name oder Link der Quelle]

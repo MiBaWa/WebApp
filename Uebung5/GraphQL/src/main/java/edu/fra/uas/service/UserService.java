@@ -48,4 +48,20 @@ public class UserService {
         return userRepository.remove(id);
     }
 
+    public User addGradeToUser(long userId, double grade) {
+        User user = userRepository.get(userId);
+        if (user != null) {
+            user.addGrade(grade);
+            userRepository.put(user.getId(), user);
+        }
+        return user;
+    }
+
+    public double calculateUserAverage(long userId) {
+        User user = userRepository.get(userId);
+        if (user != null) {
+            return user.calculateAverage();
+        }
+        return 0.0;
+    }
 }

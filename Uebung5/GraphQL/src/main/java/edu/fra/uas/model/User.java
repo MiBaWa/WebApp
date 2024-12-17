@@ -1,6 +1,8 @@
 package edu.fra.uas.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 
@@ -14,9 +16,11 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String password;
+    private List<Double> grades;
 
     public User() {
         log.debug("User created without values");
+        this.grades = new ArrayList<>();
     }
 
     public User(long id, String role, String firstName, String lastName, String email, String password) {
@@ -27,7 +31,10 @@ public class User implements Serializable {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.grades = new ArrayList<>();
     }
+
+    // Getter und Setter für alle Felder
 
     public long getId() {
         return id;
@@ -75,6 +82,22 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Double> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Double> grades) {
+        this.grades = grades;
+    }
+
+    public void addGrade(double grade) {
+        this.grades.add(grade);
+    }
+
+    public double calculateAverage() {
+        return grades.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
     }
 
     @Override

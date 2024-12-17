@@ -1,4 +1,3 @@
-
 # User type defines the structure of a User object
 type User {
     id: ID!
@@ -7,6 +6,8 @@ type User {
     lastName: String!
     email: String!
     password: String!
+    grades: [Float]!
+    average: Float
 }
 
 # Query type defines all the read operations
@@ -21,4 +22,5 @@ type Mutation {
     addUser(role: String!, firstName: String!, lastName: String!, email: String!, password: String!): User!
     updateUser(id: ID!, role: String!, firstName: String!, lastName: String!, email: String!, password: String!): User!
     deleteUser(id: ID!): Int
+    addGradeToUser(userId: ID!, grade: Float!): User!
 }

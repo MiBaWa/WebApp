@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 import edu.fra.uas.model.User;
 import edu.fra.uas.service.UserService;
 
-
 @Controller
 @SchemaMapping(typeName = "User")
 public class GraphqlController {
@@ -110,4 +109,15 @@ public class GraphqlController {
         }
     }
 
+    @MutationMapping
+    public User addGradeToUser(@Argument Long userId, @Argument Double grade) {
+        log.debug("addGradeToUser() is called");
+        return userService.addGradeToUser(userId, grade);
+    }
+
+    @QueryMapping(name="userAverage")
+    public double getUserAverage(@Argument Long userId) {
+        log.debug("getUserAverage() is called");
+        return userService.calculateUserAverage(userId);
+    }
 }
