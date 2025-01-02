@@ -45,16 +45,20 @@ GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die
   - Zusätzlich können Filter und erweiterte Abfragen definiert werden, um spezifische Daten wie To-Dos eines bestimmten Benutzers oder mit einem bestimmten Status bereitzustellen.
 2. **Filter und Mutationen**
   - **Abfragen (Queries):** Ermöglichen das Abrufen von To-Dos als Liste oder einzeln.
-    - **Beispiel:** 
+
+    **Beispiel:** 
       - getToDos: Abruf einer Liste von To-Dos.
       - getToDoByID: Abruf einer einzelnen To-Dos anhand von der todo_ID.
   - **Mutationen (Mutations):** Bieten Funktionen zur Erstellung, Aktualisierung und Löschung von To-Dos.
-    - **Beispiel:**
+    
+    **Beispiel:**
       - createToDo: Erstellung eines neuen To-Dos
       - updateToDo: Aktualisierung eines bestehenden To-Dos
       - deleteToDo: Löschung eines To-Dos anhand der ID.
-    - **Filtermechanismen:** Unterstützen flexible Anfragen, z. B. nach Benutzer (user_ID) oder Status (status_ID).
-      - **Beispiel Query:** getToDos(filter: ToDoFilter): [ToDO!]!
+
+  - **Filtermechanismen:** Unterstützen flexible Anfragen, z. B. nach Benutzer (user_ID) oder Status (status_ID).
+    
+    **Beispiel Query:** getToDos(filter: ToDoFilter): [ToDO!]!
 
 GraphQL bietet dem To-Do-Service eine leistungsstarke, flexible und erweiterbare Schnittstelle, die sowohl aktuellen Anforderungen gerecht wird als auch Raum für zukünftige Erweiterungen lässt. Der Aufbau erfolgt modular und unterstützt eine effiziente und präzise Datenabfrage für alle Clients.
 
