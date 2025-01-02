@@ -31,8 +31,8 @@ GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die
 1. **Flexibilität und Effizienz**
   - GraphQL ermöglicht es genau bzw. nur die benötigten Daten abzufragen, wodurch überflüssige Informationen vermieden und die Bandbreite reduziert wird.
   
-  **Beispiel:** Benutzer können nur die todo_name- und status_ID-Felder eines To-Dos abfragen, ohne die vollständige To-Do-Beschreibung zu erhalten.
-  
+     **Beispiel:** Benutzer können nur die todo_name- und status_ID-Felder eines To-Dos abfragen, ohne die vollständige To-Do-Beschreibung zu erhalten.
+
   - Dies reduziert den Datenverkehr und verbessert die Performance.
 2. **Optimierte Abfragen**
   - GraphQL bietet eine einfache Möglichkeit, gezielte Filtermechanismen zu implementieren, wie z. B. das Abrufen von To-Dos nach Benutzer (user_ID) oder Status (status_ID).
