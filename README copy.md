@@ -24,11 +24,11 @@ Die folgenden Attribute beschreiben die Struktur des Modells dieses Web Services
 ## Schnittstellendefinition
 Bei der Schnittstelle zwischen dem To-Do-Serice und dem API-Gateway haben wir uns für GraphQL entschieden.
 
-### **Warum GraphQL?**
+### Warum GraphQL?
 
 GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die den Anforderungen des Projekts entsprechen:
 
-#### Flexibilität und Effizienz
+1. **Flexibilität und Effizienz**
   - GraphQL ermöglicht es genau bzw. nur die benötigten Daten abzufragen, wodurch überflüssige Informationen vermieden und die Bandbreite reduziert wird.
   
      **Beispiel:** Benutzer können nur die todo_name- und status_ID-Felder eines To-Dos abfragen, ohne die vollständige To-Do-Beschreibung zu erhalten.
