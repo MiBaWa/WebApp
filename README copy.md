@@ -24,18 +24,18 @@ Die folgenden Attribute beschreiben die Struktur des Modells dieses Web Services
 ## Schnittstellendefinition
 Bei der Schnittstelle zwischen dem To-Do-Serice und dem API-Gateway haben wir uns für GraphQL entschieden.
 
-### Warum GraphQL?
+### **Warum GraphQL?**
 
 GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die den Anforderungen des Projekts entsprechen:
 
-1. **Flexibilität und Effizienz**
+### Flexibilität und Effizienz
   - GraphQL ermöglicht es genau bzw. nur die benötigten Daten abzufragen, wodurch überflüssige Informationen vermieden und die Bandbreite reduziert wird.
   
      **Beispiel:** Benutzer können nur die todo_name- und status_ID-Felder eines To-Dos abfragen, ohne die vollständige To-Do-Beschreibung zu erhalten.
 
   - Dies reduziert den Datenverkehr und verbessert die Performance.
 2. **Optimierte Abfragen**
-  - GraphQL bietet eine einfache Möglichkeit, gezielte Filtermechanismen zu implementieren, wie z. B. das Abrufen von To-Dos nach Benutzer (user_ID) oder Status (status_ID).
+  - GraphQL bietet eine einfache Möglichkeit, gezielte Filtermechanismen zu implementieren, wie z. B. das Abrufen von To-Dos nach User (user_ID) oder Status (status_ID).
 3. **Zukunftssicherheit und Erweiterbarkeit**
   - Die Möglichkeit, Felder oder Funktionen hinzuzufügen, ohne bestehende Abfragen zu beeinflussen, macht GraphQL ideal für einen modularen Aufbau.
   - Wenn der To-Do-Service später erweitert wird, z. B. um Prioritäten oder Tags, können diese einfach ins Schema integriert werden, ohne bestehende Clients zu beeinträchtigen.
@@ -44,7 +44,7 @@ GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die
 
 1. **Datenmodell und Schema**
   - Die Schnittstelle basiert auf einem klar definierten Schema, das die Haupt-CRUD-Operationen (Create, Read, Update, Delete) für To-Dos abdeckt.
-  - Zusätzlich können Filter und erweiterte Abfragen definiert werden, um spezifische Daten wie To-Dos eines bestimmten Benutzers oder mit einem bestimmten Status bereitzustellen.
+  - Zusätzlich können Filter und erweiterte Abfragen definiert werden, um spezifische Daten wie To-Dos eines bestimmten User oder mit einem bestimmten Status bereitzustellen.
 2. **Filter und Mutationen**
   - **Abfragen (Queries):** Ermöglichen das Abrufen von To-Dos als Liste oder einzeln.
 
