@@ -40,7 +40,7 @@ GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die
   - Die Möglichkeit, Felder oder Funktionen hinzuzufügen, ohne bestehende Abfragen zu beeinflussen, macht GraphQL ideal für einen modularen Aufbau.
   - Wenn der To-Do-Service später erweitert wird, z. B. um Prioritäten oder Tags, können diese einfach ins Schema integriert werden, ohne bestehende Clients zu beeinträchtigen.
 
-### Schnittstellen Aufbau
+### Schnittstellenaufbau
 
 1. **Datenmodell und Schema**
   - Die Schnittstelle basiert auf einem klar definierten Schema, das die Haupt-CRUD-Operationen (Create, Read, Update, Delete) für To-Dos abdeckt.
