@@ -29,7 +29,7 @@ Bei der Schnittstelle zwischen dem To-Do-Service und dem API-Gateway haben wir u
 
 GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die den Anforderungen des Projekts entsprechen:
 
-### 1. Flexibilität und Effizienz
+#### 1. Flexibilität und Effizienz
 GraphQL ermöglicht es, nur die benötigten Datenfelder abzufragen, wie z. B. `todo_name` und `status_ID`, ohne zusätzliche Informationen wie die vollständige Beschreibung eines To-Dos zu laden. Dadurch wird der Datenverkehr reduziert und die Performance verbessert.
 
 - **Im Vergleich zu REST:**  
@@ -38,7 +38,7 @@ GraphQL ermöglicht es, nur die benötigten Datenfelder abzufragen, wie z. B. `t
   gRPC bietet schnelle, binäre Kommunikation, aber die Protobuf-Schemas legen die Datenstruktur vorab fest, wodurch gezielte Teilabfragen weniger flexibel gestaltet werden können.
 
 
-### 2. Optimierte Abfragen
+#### 2. Optimierte Abfragen
 GraphQL unterstützt gezielte Filtermechanismen, wie das Abrufen von To-Dos nach `user_ID` oder `status_ID`. Dies ermöglicht präzise und dynamische Abfragen.
 
 - **Im Vergleich zu REST:**  
@@ -47,7 +47,7 @@ GraphQL unterstützt gezielte Filtermechanismen, wie das Abrufen von To-Dos nach
   gRPC erfordert bei spezifischen Filteranfragen häufig Schema-Anpassungen, da die Flexibilität durch das feste Protobuf-Schema eingeschränkt ist.
 
 
-### 3. Zukunftssicherheit und Erweiterbarkeit
+#### 3. Zukunftssicherheit und Erweiterbarkeit
 GraphQL ermöglicht das Hinzufügen neuer Felder oder Funktionen, wie z. B. Prioritäten oder Tags, ohne bestehende Abfragen zu beeinflussen. Dies macht es ideal für modulare und erweiterbare Architekturen.
 
 - **Im Vergleich zu REST:**  
@@ -56,7 +56,7 @@ GraphQL ermöglicht das Hinzufügen neuer Felder oder Funktionen, wie z. B. Prio
   Änderungen am Schema können bestehende Clients beeinträchtigen, wenn diese nicht kompatibel sind.
 
 
-### 4. Schnittstellenaufbau
+#### 4. Schnittstellenaufbau
 Die Schnittstelle des To-Do-Services ist auf einem klar definierten GraphQL-Schema aufgebaut, das folgende Funktionen umfasst:
 - **CRUD-Operationen:**  
   - `getToDos`: Abruf einer Liste von To-Dos.  
