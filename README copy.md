@@ -22,47 +22,50 @@ Die folgenden Attribute beschreiben die Struktur des Modells dieses Web Services
 - **user_ID:** Verweis auf den zugewiesenen Benutzer.
 
 ## Schnittstellendefinition
-Bei der Schnittstelle zwischen dem To-Do-Serice und dem API-Gateway haben wir uns für GraphQL entschieden.
+## Schnittstellendefinition
+Bei der Schnittstelle zwischen dem To-Do-Service und dem API-Gateway haben wir uns für GraphQL entschieden.
 
 ### Warum GraphQL?
 
 GraphQL wird für den To-Do-Service gewählt, da es mehrere Vorteile bietet, die den Anforderungen des Projekts entsprechen:
 
-1. **Flexibilität und Effizienz**
-  - GraphQL ermöglicht es genau bzw. nur die benötigten Daten abzufragen, wodurch überflüssige Informationen vermieden und die Bandbreite reduziert wird.
-  
-     **Beispiel:** Benutzer können nur die todo_name- und status_ID-Felder eines To-Dos abfragen, ohne die vollständige To-Do-Beschreibung zu erhalten.
+### 1. Flexibilität und Effizienz
+GraphQL ermöglicht es, nur die benötigten Datenfelder abzufragen, wie z. B. `todo_name` und `status_ID`, ohne zusätzliche Informationen wie die vollständige Beschreibung eines To-Dos zu laden. Dadurch wird der Datenverkehr reduziert und die Performance verbessert.
 
-  - Dies reduziert den Datenverkehr und verbessert die Performance.
-2. **Optimierte Abfragen**
-  - GraphQL bietet eine einfache Möglichkeit, gezielte Filtermechanismen zu implementieren, wie z. B. das Abrufen von To-Dos nach User (user_ID) oder Status (status_ID).
-3. **Zukunftssicherheit und Erweiterbarkeit**
-  - Die Möglichkeit, Felder oder Funktionen hinzuzufügen, ohne bestehende Abfragen zu beeinflussen, macht GraphQL ideal für einen modularen Aufbau.
-  - Wenn der To-Do-Service später erweitert wird, z. B. um Prioritäten oder Tags, können diese einfach ins Schema integriert werden, ohne bestehende Clients zu beeinträchtigen.
+- **Im Vergleich zu REST:**  
+  REST liefert standardmäßig komplette Ressourcen. Selbst wenn nur bestimmte Felder benötigt werden, wird der gesamte Datensatz übertragen, was zu Overfetching führt.
+- **Im Vergleich zu gRPC:**  
+  gRPC bietet schnelle, binäre Kommunikation, aber die Protobuf-Schemas legen die Datenstruktur vorab fest, wodurch gezielte Teilabfragen weniger flexibel gestaltet werden können.
 
-### Schnittstellenaufbau
 
-1. **Datenmodell und Schema**
-  - Die Schnittstelle basiert auf einem klar definierten Schema, das die Haupt-CRUD-Operationen (Create, Read, Update, Delete) für To-Dos abdeckt.
-  - Zusätzlich können Filter und erweiterte Abfragen definiert werden, um spezifische Daten wie To-Dos eines bestimmten User oder mit einem bestimmten Status bereitzustellen.
-2. **Filter und Mutationen**
-  - **Abfragen (Queries):** Ermöglichen das Abrufen von To-Dos als Liste oder einzeln.
+### 2. Optimierte Abfragen
+GraphQL unterstützt gezielte Filtermechanismen, wie das Abrufen von To-Dos nach `user_ID` oder `status_ID`. Dies ermöglicht präzise und dynamische Abfragen.
 
-    **Beispiel:** 
-      - getToDos: Abruf einer Liste von To-Dos.
-      - getToDoByID: Abruf einer einzelnen To-Dos anhand von der todo_ID.
-  - **Mutationen (Mutations):** Bieten Funktionen zur Erstellung, Aktualisierung und Löschung von To-Dos.
-    
-    **Beispiel:**
-      - createToDo: Erstellung eines neuen To-Dos
-      - updateToDo: Aktualisierung eines bestehenden To-Dos
-      - deleteToDo: Löschung eines To-Dos anhand der ID.
+- **Im Vergleich zu REST:**  
+  REST kann Filter implementieren, erfordert jedoch oft zusätzliche Endpunkte, was den Prozess weniger dynamisch macht.
+- **Im Vergleich zu gRPC:**  
+  gRPC erfordert bei spezifischen Filteranfragen häufig Schema-Anpassungen, da die Flexibilität durch das feste Protobuf-Schema eingeschränkt ist.
 
-  - **Filtermechanismen:** Unterstützen flexible Anfragen, z. B. nach Benutzer (user_ID) oder Status (status_ID).
-    
-    **Beispiel Query:** getToDos(filter: ToDoFilter): [ToDO!]!
 
-GraphQL bietet dem To-Do-Service eine leistungsstarke, flexible und erweiterbare Schnittstelle, die sowohl aktuellen Anforderungen gerecht wird als auch Raum für zukünftige Erweiterungen lässt. Der Aufbau erfolgt modular und unterstützt eine effiziente und präzise Datenabfrage für alle Clients.
+### 3. Zukunftssicherheit und Erweiterbarkeit
+GraphQL ermöglicht das Hinzufügen neuer Felder oder Funktionen, wie z. B. Prioritäten oder Tags, ohne bestehende Abfragen zu beeinflussen. Dies macht es ideal für modulare und erweiterbare Architekturen.
+
+- **Im Vergleich zu REST:**  
+  Neue Felder oder Funktionen erfordern oft neue Endpunkte, was zu einer Fragmentierung der API führen kann.
+- **Im Vergleich zu gRPC:**  
+  Änderungen am Schema können bestehende Clients beeinträchtigen, wenn diese nicht kompatibel sind.
+
+
+### 4. Schnittstellenaufbau
+Die Schnittstelle des To-Do-Services ist auf einem klar definierten GraphQL-Schema aufgebaut, das folgende Funktionen umfasst:
+- **CRUD-Operationen:**  
+  - `getToDos`: Abruf einer Liste von To-Dos.  
+  - `getToDoByID`: Abruf eines spezifischen To-Dos anhand der `todo_ID`.  
+  - `createToDo`, `updateToDo`, `deleteToDo`: Erstellung, Aktualisierung und Löschung von To-Dos.
+- **Filtermechanismen:**  
+  Flexible Abfragen, z. B. nach Benutzer (`user_ID`) oder Status (`status_ID`).
+
+GraphQL übertrifft sowohl REST als auch gRPC in den Bereichen Flexibilität, Effizienz und Erweiterbarkeit. REST ist weniger dynamisch und liefert oft mehr Daten als benötigt, während gRPC zwar schnell ist, jedoch weniger flexibel bei gezielten Abfragen und Erweiterungen. GraphQL bietet die optimale Lösung für den To-Do-Service, da es präzise, leistungsstarke und erweiterbare Schnittstellen bereitstellt.
 
 ### API Endpoints
 
